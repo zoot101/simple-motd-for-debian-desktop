@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+# Determine the action
+action="${1}"
+
+# Remove or Purge
+if [ "$action" = "purge" ] || [ "$action" = "remove" ]
+then
+  # cleanup bashrc references to simple-motd, so errors aren't triggered after simple-motd is uninstalled
+  sed -i '/# displays motd/,/source \/etc\/profile.d\/simple-motd/d' "/etc/bash.bashrc"
+fi
+
+#DEBHELPER#
+
+exit 0
+

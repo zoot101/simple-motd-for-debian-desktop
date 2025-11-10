@@ -1,0 +1,46 @@
+#!/bin/sh
+set -e
+
+action="${1}"
+
+# postinst configure is called after installation
+if [ "$action" = "configure" ] || [ "$action" = "reconfigure" ]
+then
+  # Source debconf library.
+  . /usr/share/debconf/confmodule
+
+  # Read Debconf to Determine choice about the username
+  db_get simple-motd/user || true
+  USER="$RET"
+
+  # make sure the config isn't already set
+  if [ "$(grep "simple-motd" /etc/bash.bashrc | wc -l)" = '0' ];
+  then
+    echo "# Displays motd from https://github.com/angela-d/simple-motd-for-debian-desktop" >> "/etc/bash.bashrc"
+    echo "source /etc/profile.d/simple-motd" >> "/etc/bash.bashrc"
+  fi
+
+  # Check if the user given was valid or not, or if root was given
+  if [ "$USER" != "all" ]; then
+    if [ -z "$USER" ]; then
+      USER="all"
+    elif ! id "$USER" >/dev/null; then
+      USER="all"
+    elif [ "$USER" = "root" ]; then
+      USER="all"
+    fi
+  fi
+
+  # Display for all Users or Not
+  if [ "$USER" = "all" ]
+  then
+    echo "DISPLAY_TO=ALL" > "/etc/simple-motd.conf"
+  else
+    echo "DISPLAY_TO=$USER" > "/etc/simple-motd.conf"
+  fi
+fi
+
+#DEBHELPER#
+
+exit 0
+

@@ -1,0 +1,3 @@
+source/simple-motd /usr/bin
+source/simple-motd.conf /etc
+source/profile.d/simple-motd /etc/profile.d
