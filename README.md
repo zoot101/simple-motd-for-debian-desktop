@@ -15,7 +15,7 @@ Ubuntu-like "message of the day" screen for Debian desktop terminals, without th
 ![Install](img/install-progress.png)
 
 ## Install
-Clone the repo or download the latest .deb installer from the [releases](https://github.com/angela-d/simple-motd-for-debian-desktop/releases) page and run:
+Clone the repo or download the latest .deb installer from the [releases](https://github.com/zoot101/simple-motd-for-debian-desktop/releases) page and run:
 ```bash
 sudo apt install ./simple-motd.deb
 ```
