@@ -1,0 +1,146 @@
+simple-motd (1.2.6-3) stable; urgency=low
+
+  * Updated maintainer details.
+
+ -- Mark <mark9000@fastmail.org>  Thu, 01 Jan 2026 14:27:21 +0100
+
+simple-motd (1.2.6-2) stable; urgency=low
+
+  * Updated Debian Maintainer email.
+
+ -- Mark <mark9000@fastmail.org>  Mon, 10 Nov 2025 11:23:32 +0100
+
+simple-motd (1.2.6-1) stable; urgency=low
+
+  * Changed method of determining the user in /etc/profile.d/simple-motd
+    to use the whoami command to fix the user being incorrect in
+    certain circumstances.
+
+  * Revised version numbers to remove "~mf" as original source on
+    github has not been updated since 2019.
+
+  * Removed build dependency on dh-exec. Removed dh-exec from install
+    file as it was not being used.
+
+  * Compressed manual entry.
+
+  * Corrected the depreciated usage of "=" for ">=" in debian/control.
+
+  * Removed shlib:depends from debian/control as it was not being
+    used.
+
+  * Changed source format to 3.0 (quilt).
+
+  * Changed manpage description to a single line only to remove lintian
+    warning about the NAME field.
+
+  * Removed comments from debian/rules to clear lintian boilerplate
+    warning.
+
+  * Revamped Old prompts to user during installation to use Debconf
+    along with po for translations that presents the user with the
+    option to specify a user to use with Simple-MOTD or to display
+    to all users.
+    - Re-Wrote postinst and postrm scripts to achieve this.
+
+  * Completed Lintian Check on package. Package now 100% Lintian
+    clean with no overrides!
+
+ -- Mark <mark9000@fastmail.org>  Wed, 05 Nov 2025 17:24:19 +0100
+
+simple-motd (1.2.5-1) stable; urgency=low
+
+  * Switched to "#!/usr/bin/env sh"
+
+  * Added build dependency for dh-exec.
+
+ -- Mark <mark9000@fastmail.org>  Sat, 24 May 2025 09:47:01 +0100
+
+simple-motd (1.2.4-3) stable; urgency=low
+
+  * Changed lolcat command to /usr/games/lolcat in main script.
+
+ -- Mark <mark9000@fastmail.org>  Sat, 03 May 2025 00:47:11 +0100
+
+simple-motd (1.2.4-2) stable; urgency=low
+
+  * Fixed typo in below change.
+
+ -- Mark <mark9000@fastmail.org>  Sat, 03 May 2025 00:40:11 +0100
+
+simple-motd (1.2.4-1) stable; urgency=low
+
+  * Fixed lolcat command in main script to have it correctly execute
+    for root, as the PATH variable does not include /usr/share/games/
+
+ -- Mark <mark9000@fastmail.org>  Sat, 03 May 2025 00:04:18 +0100
+
+simple-motd (1.2.3-1) stable; urgency=low
+
+  * Replaced debian directory entirely, and started from scratch.
+
+  * Also changed directory struture of original source.
+
+ -- Mark <mark9000@fastmail.org>  Fri, 02 May 2025 23:50:21 +0100
+
+simple-motd (1.2.2-2) stable; urgency=low
+
+  * Changed postinst scripts to only prompt the user on new installations,
+    and not upgrades.
+
+ -- Mark <mark9000@fastmail.org>  Fri, 02 May 2025 23:50:21 +0100
+
+simple-motd (1.2.2-1) stable; urgency=low
+
+  * Minor changes in postinst and postrm scripts.
+
+ -- Mark <mark9000@fastmail.org>  Fri, 02 May 2025 22:58:50 +0100
+
+simple-motd (1.2.1-1) stable; urgency=low
+
+  * Corrected debian/postrm script to only perform uninstall actions
+    when purge or remove was carried out. Previously the uninstall
+    action was carried out on an upgrade.
+
+ -- Mark <mark9000@fastmail.org>  Fri, 02 May 2025 19:58:50 +0100
+
+simple-motd (1.2.0-4) stable; urgency=low
+
+  * Corrected maintainer in debian/control.
+
+ -- Mark <mark9000@fastmail.org>  Fri, 02 May 2025 10:58:59 +0100
+
+simple-motd (1.2.0-3) stable; urgency=low
+
+  * Package housekeeping - Changed build-depends to debhelper-compat 
+    and deleted debian/compat to remove warning.
+
+ -- Mark <mark9000@fastmail.org>  Fri, 02 May 2025 10:40:37 +0100
+
+simple-motd (1.2.0-2) stable; urgency=low
+
+  * Package housekeeping - added "mf" to debian version.
+
+ -- Mark <mark9000@fastmail.org>  Fri, 02 May 2025 09:23:10 +0100
+
+simple-motd (1.2.0-1) stable; urgency=low
+
+  * Packaged for bookworm.
+  * Added .manpage file to install the man page.
+
+ -- Mark <mark9000@fastmail.org>  Fri, 02 May 2025 09:17:02 +0100
+
+simple-motd (1.2.0) stable; urgency=low
+
+  * Added some vibrancy to the terminal output
+  * Added top memory hogs and IP to output
+  * Rounded up total memory display
+
+ -- Angela <angelad@disroot.org>  Mon, 30 Sep 2019 21:36:54 -0500
+
+simple-motd (1.1.0) stable; urgency=low
+
+  * Bugfixes and logic improvements
+
+ -- Angela <angelad@disroot.org>  Fri, 17 May 2019 23:06:05 -0500
+
