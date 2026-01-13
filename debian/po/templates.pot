@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the simple-motd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-motd\n"
+"Report-Msgid-Bugs-To: simple-motd@packages.debian.org\n"
+"POT-Creation-Date: 2025-11-05 16:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: string
+#. Description
+#: ../templates:1001
+msgid "Simple-MOTD User:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../templates:1001
+msgid ""
+"If you want Simple-MOTD to display to a single user, enter the user name "
+"below."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../templates:1001
+msgid ""
+"To display Simple-MOTD to all users (including root), either leave blank or  "
+"input \"all\" below."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../templates:1001
+msgid ""
+"If a non-valid username is chosen, then it will default to be displayed to "
+"all users."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../templates:1001
+msgid "To change after installation one can run the following command again."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../templates:1001
+msgid "$ dpkg-reconfigure simple-motd"
+msgstr ""
