@@ -1,0 +1,16 @@
+Template: simple-motd/user
+Type: string
+_Description: Simple-MOTD User:
+ If you want Simple-MOTD to display to a single user, enter the user
+ name below.
+ .
+ To display Simple-MOTD to all users (including root), either leave blank or 
+ input "all" below.
+ .
+ If a non-valid username is chosen, then it will default to be displayed to
+ all users.
+ .
+ To change after installation one can run the following command again.
+ .
+ $ dpkg-reconfigure simple-motd
+ .
