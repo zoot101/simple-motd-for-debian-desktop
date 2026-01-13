@@ -1,0 +1,22 @@
+Source: simple-motd
+Section: misc
+Priority: optional
+Maintainer: Mark <mark9000@fastmail.org>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ po-debconf,
+Standards-Version: 4.6.2
+Homepage: https://github.com/angela-d/simple-motd-for-debian-desktop
+
+Package: simple-motd
+Architecture: any
+Pre-Depends:
+ po-debconf,
+Depends:
+ figlet (>=2.2.5),
+ lolcat (>=42.0.99),
+ net-tools (>=1.60),
+ ${misc:Depends},
+Description: Simple MOTD for Debian-based desktops and terminals
+ Pretty up your terminal window with ascii & informational snippets.
